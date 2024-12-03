@@ -23,13 +23,7 @@ document.getElementById('generate-button').addEventListener('click', () => {
     let arroz_o_pasta_previos = false;
     let pescado_incluido = false;
     
-    for (const dia of dias_semana) {
-        if (menu.length === 6 && !pescado_incluido) {
-            menu.push(`${dia}\nPescado`);
-            pescado_incluido = true;
-            continue;
-        }
-        
+    for (const dia of dias_semana) {        
         if (Math.random() < 0.5 && !arroz_o_pasta_previos) {
             let plato_unico;
             do {
